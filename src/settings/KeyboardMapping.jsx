@@ -1,5 +1,3 @@
-import { KeyboardControls } from '@react-three/drei'
-
 export function setKeyboardMapping() {
     return  [
         { name: 'forward', keys: [ 'ArrowUp', 'KeyW' ] },
