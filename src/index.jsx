@@ -1,10 +1,24 @@
+import { setKeyboardMapping } from './settings/KeyboardMapping'
 import './style.css'
 import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 root.render(
-    <>
-        Soon to be a badass R3F application
-    </>
+    <KeyboardControls
+        map={setKeyboardMapping()}
+    >
+        <Canvas
+            shadows
+            camera={ {
+                fov: 45,
+                near: 0.1,
+                far: 200,
+                position: [ 2.5, 4, 6 ]
+            } }
+        >
+            <Main />
+        </Canvas>
+        {/* <Interface /> */}
+    </KeyboardControls>
 )
